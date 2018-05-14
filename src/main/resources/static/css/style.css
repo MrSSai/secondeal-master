@@ -1,0 +1,329 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  list-style: none;
+  font-family: "微软雅黑"
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+/*注册及登录页面公共样式*/
+.main-container-wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+.mask {
+  width: 500px;
+  height: 250px;
+  background: #008040;
+  opacity: 0.1;
+  position: absolute;
+  top: 50%;
+  margin-top: -175px;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.main-container {
+  width: 500px;
+  height: 350px;
+  position: absolute;
+  top: 50%;
+  margin-top: -175px;
+  z-index: 2;
+}
+
+.register-content {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.register-item {
+  margin: 20px auto;
+  padding: 20px;
+  position: relative;
+}
+
+.register-item span {
+  display: inline-flex;
+  justify-content: flex-start;
+  position: absolute;
+  left: 50px;
+}
+
+.register-item input {
+  width: 60%;
+  height: 35px;
+  display: inline-flex;
+  justify-content: flex-end;
+  position: absolute;
+  right: 50px;
+  border: 1px solid #575757;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.register-title {
+  position: absolute;
+  top: -25%;
+}
+
+/*登录及注册按钮公共样式*/
+.common-btn {
+  width: 45%;
+  height: 40px;
+  border-radius: 5px;
+  background: #46B946;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/*选择我要买or我要卖*/
+.select-item {
+  width: 200px;
+  height: 100px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background: #fff;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  margin-top: -100px;
+  /*设置层级*/
+  z-index: 5;
+  display: none;
+}
+
+.select-item .select-buy,
+.select-item .select-sell {
+  width: 100%;
+  height: 50%;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.select-item .select-buy:hover,
+.select-item .select-sell:hover {
+  background: #000;
+  color: #fff;
+}
+
+.select-item .select-buy {
+  border-bottom: 1px solid #000;
+}
+
+/*弹出层的遮罩层*/
+.select-mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.4;
+  z-index: 3;
+  display: none;
+}
+
+/*卖家及买家系统区域样式*/
+
+.home-title {
+  position: absolute;
+  top: 40px;
+  left: 150px;
+}
+
+.sell-wrap {
+  width: 100%;
+  height: 75%;
+  position: absolute;
+  top: 24%;
+  /*left: 150px;*/
+  border-top: 1px solid #000;
+}
+
+.sell-wrap .sell-title {
+  display: inline-flex;
+  position: relative;
+  top: 3px;
+  width: 100px;
+  height: 36px;
+  text-align: center;
+  justify-content: center;
+  line-height: 36px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.selected-item {
+  /*background: #000!important;*/
+  /*color: #fff;*/
+  border-bottom: 2px solid #000;
+}
+
+.add-goods-title {
+  border-right: 2px solid #fff;
+}
+
+/*点击切换对应Tab的显示隐藏*/
+.add-goods {
+  display: block;
+}
+
+.goods-msg {
+  display: none;
+}
+
+.add-goods-setting,
+.add-goods-msg {
+  width: 80%;
+  /*height: 50%;*/
+  margin: 0 auto;
+}
+
+.add-goods-setting {
+  position: relative;
+  top: 0;
+}
+
+.add-goods-setting div {
+  margin-left: 100px;
+  margin-top: 20px;
+}
+
+/*上架商品区域的公共样式*/
+.common-setting-item {
+  position: absolute;
+  left: 200px;
+}
+
+/*商品信息区域的公共样式*/
+.common-msg-item {
+  position: absolute;
+  left: 350px;
+}
+
+.goods-state p {
+  display: inline-flex;
+}
+
+.add-goods-btn {
+  width: 200px;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background: #46B946;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  margin-left: 200px;
+  margin-top: 40px;
+}
+
+/*商品信息区域样式*/
+.goods-msg {
+  margin-left: 100px;
+  margin-bottom: 50px;
+  line-height: 50px;
+}
+
+.goods-pic {
+  display: inline-flex;
+  width: 70px;
+  height: 70px;
+  border: 1px solid #000;
+  position: absolute;
+  margin-left: 75px;
+  margin-top: -12px;
+}
+
+.goods-pic img {
+  width: 100%;
+  height: 100%;
+}
+
+.goods-msg div {
+  margin-left: 100px;
+}
+
+.uploadImg-wrap {
+  width: 75px;
+  height: 75px;
+}
+
+/*编辑个人信息页面样式*/
+.msg-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.msg-wrap {
+  width: 600px;
+  height: 400px;
+  background: #E6F3EC;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  margin-top: -200px;
+  left: 50%;
+  margin-left: -300px;
+}
+
+.msg-wrap ul li {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 50px;
+  margin-top: 25px;
+}
+
+.msg-wrap ul li input {
+  width: 200px;
+  height: 30px;
+  padding-left: 10px;
+  font-size: 18px;
+  margin-left: 20px;
+}
+
+.msg-wrap .confirm-edit-msg {
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  color: #fff;
+  font-size: 16px;
+  background: #46B946;
+  cursor: pointer;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -100px;
+}
+
+/*返回按钮样式*/
+
+.back-btn {
+  display: block;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}

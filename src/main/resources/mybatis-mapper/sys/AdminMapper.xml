@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.secondeal.dao.AdminDao" >
+  <resultMap id="BaseResultMap" type="com.secondeal.model.Admin" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="uuid" property="uuid" jdbcType="VARCHAR" />
+    <result column="username" property="username" jdbcType="VARCHAR" />
+    <result column="password" property="password" jdbcType="VARCHAR" />
+    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="tableName">
+    sys_admin
+  </sql>
+  <sql id="field" >
+    id, uuid, username, password, create_time
+  </sql>
+  <sql id="value">
+    #{id,jdbcType=BIGINT}, #{uuid,jdbcType=VARCHAR}, #{username,jdbcType=VARCHAR},
+      #{password,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}
+  </sql>
+  <select id="getUser" resultMap="BaseResultMap">
+    SELECT
+    <include refid="field"/>
+    FROM
+    <include refid="tableName"/>
+    WHERE
+    username = #{username}
+  </select>
+
+</mapper>
